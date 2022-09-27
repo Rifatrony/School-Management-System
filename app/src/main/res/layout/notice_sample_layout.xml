@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layoutTvShow"
+    android:layout_marginStart="10dp"
+    android:layout_marginEnd="10dp"
+    android:layout_marginBottom="10dp"
+    >
+
+    <View
+        android:id="@+id/viewSupporter"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        app:layout_constraintTop_toBottomOf="@id/cardView"
+        />
+
+    <View
+        android:id="@+id/viewBackground"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/tv_show_background"
+        android:paddingBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="@id/noticeTitleTextView"
+        />
+
+    <soup.neumorphism.NeumorphCardView
+        android:id="@+id/cardView"
+        android:layout_width="110dp"
+        android:layout_height="140dp"
+        android:layout_marginStart="10dp"
+        app:neumorph_backgroundColor="@color/background"
+        app:neumorph_shadowColorDark="@color/dark_shadow"
+        app:neumorph_shadowColorLight="@color/light_shadow"
+        app:neumorph_shadowElevation="3dp"
+        app:neumorph_shapeType="pressed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/dateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Class"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_color"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <TextView
+                android:id="@+id/yearTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sep"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_color"
+                android:layout_gravity="center_horizontal"
+                />
+
+        </LinearLayout>
+
+    </soup.neumorphism.NeumorphCardView>
+
+
+    <TextView
+        android:id="@+id/noticeTitleTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Notice Title"
+        android:textColor="@color/text_color"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:paddingTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/cardView"
+        app:layout_constraintTop_toTopOf="@id/cardView"
+        />
+
+
+    <TextView
+        android:id="@+id/noticeDateTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:text="Notice Date"
+        android:textColor="@color/text_color"
+        android:textSize="13sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/noticeTitleTextView"
+        app:layout_constraintStart_toStartOf="@id/noticeTitleTextView"
+        app:layout_constraintTop_toBottomOf="@id/noticeTitleTextView"
+        />
+
+    <TextView
+        android:id="@+id/noticeDescriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:text="Notice Description"
+        android:maxLines="3"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/text_color"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="@id/noticeTitleTextView"
+        app:layout_constraintStart_toStartOf="@id/noticeTitleTextView"
+        app:layout_constraintTop_toBottomOf="@id/noticeDateTextView"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
